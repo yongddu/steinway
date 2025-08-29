@@ -1,0 +1,763 @@
+@charset "UFT-8";
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap");
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  overflow-x: hidden;
+  cursor: none;
+}
+#header {
+  width: 100%;
+  height: 245px;
+  /* background: yellow; */
+}
+
+.inner {
+  position: relative;
+}
+
+h1 {
+  content: "";
+  width: 295px;
+  height: 64px;
+  background: url(../img/ss-logo2.svg) no-repeat 50% 50%;
+  transform: translate(-50%, 0%);
+  position: absolute;
+  left: 50%;
+  top: 19px;
+}
+
+.inner nav-1 {
+  width: 100%;
+  height: 95px;
+  display: flex;
+  /* background: #f0f; */
+  border-bottom: 1px solid #888;
+}
+
+.util-group {
+  padding: 0 32px;
+  margin-top: 19px;
+  margin-left: auto;
+  display: flex;
+  gap: 55px;
+  font-weight: 600;
+}
+.util-menu {
+  font-size: 18px;
+  line-height: 1.3;
+}
+.util-menu:first-child {
+  position: relative;
+}
+
+.util-menu:first-child::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background: url(../img/point-2.png) no-repeat 50% 50%;
+  right: -30px;
+  top: 11px;
+  transform: translateY(-50%);
+}
+.util-menu:last-child {
+  position: relative;
+}
+
+.util-menu:last-child::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background: url(../img/point-1.png) no-repeat 50% 50%;
+  right: -30px;
+  top: 11px;
+  transform: translateY(-50%);
+}
+
+.gnb {
+  margin-top: 80px;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.gnb li {
+  position: relative;
+  transition: 0.5s;
+}
+
+.gnb li:hover::before {
+  content: "까꿍";
+  background: #000;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+}
+.gnb li::before {
+  content: "";
+  background: #000;
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.hero {
+  width: 100%;
+}
+
+.hero .inner {
+  display: flex;
+}
+
+.slide {
+  width: 100%;
+  position: relative;
+}
+
+.slide-item {
+  width: 100%;
+}
+
+.slide-item img {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-next {
+  left: 20px;
+}
+
+.btn-prev {
+  right: 20px;
+}
+
+.slide {
+  border: 1px solid #000;
+  margin: 0 auto;
+}
+.gran {
+  position: absolute;
+  font-family: "Oswald";
+  font-weight: 600;
+  top: 76px;
+  left: 156px;
+  color: #fff;
+  font-size: 74px;
+}
+.limit {
+  position: absolute;
+  font-family: Roboto Light;
+  top: 166px;
+  left: 157px;
+  color: #fff;
+  font-size: 29px;
+}
+
+.slide p {
+  position: absolute;
+  font-family: "Monsieur La Doulaise", Regular;
+  bottom: 92px;
+  right: 136px;
+  color: #fff;
+  font-size: 64px;
+}
+
+.inner {
+  width: 1320px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.explain .inner {
+  width: 1230px;
+  line-height: 1.5;
+}
+
+.explain p {
+  font-family: "Crimson Pro";
+  font-size: 28px;
+  margin-top: 45px;
+  text-align: center;
+  margin: 70px 75px;
+}
+.explain p strong {
+  font-weight: 700;
+}
+.explain h5 {
+  margin: 0 auto;
+  letter-spacing: normal;
+  margin-top: 154px;
+  text-align: center;
+  font-family: "Oswald";
+  font-weight: 600;
+  font-size: 30px;
+}
+.build {
+  margin-top: 300px;
+}
+.build .inner p {
+  font-family: "Monsieur La Doulaise", Regular;
+  font-size: 50px;
+  margin-top: 17px;
+}
+
+.card {
+  margin: 300px auto;
+  transform: translateY(300px);
+  opacity: 0;
+  transition: all 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  justify-content: space-between;
+  gap: 20;
+}
+
+.card-text {
+  text-align: left;
+}
+
+.card.visible {
+  transform: translateY(0);
+  gap: 20px;
+  opacity: 1;
+}
+
+.card.visible figure {
+  position: relative;
+}
+
+.card.visible figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.cardd figure {
+  position: relative;
+}
+.cardd figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.card h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 40px;
+  font-family: "Crimson Pro";
+}
+
+.card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 32px;
+  font-family: "Crimson Pro";
+}
+
+.cardd {
+  margin: 120px auto;
+  transform: translateY(300px);
+  opacity: 0;
+  transition: all 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cardd-text {
+  text-align: left;
+}
+
+.cardd.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cardd h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 40px;
+  font-family: "Crimson Pro";
+}
+
+.cardd p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 32px;
+  font-family: "Crimson Pro";
+}
+
+.build-explain .inner .hehe h5 {
+  font-size: 35px;
+  font-family: "Oswald";
+  font-weight: 500;
+  width: 487px;
+  text-align: left;
+  line-height: 1.3;
+  letter-spacing: -2px;
+}
+
+.build-explain .inner .hehe p {
+  font-size: 19.4px;
+  font-family: "Crimson Pro";
+  width: 784px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.hehe {
+  display: flex;
+  gap: 49px;
+}
+
+.video {
+  width: 1920px;
+  margin: 220px auto;
+}
+
+.video .inner {
+  width: 1920px;
+  background: #888;
+}
+
+.video .inner iframe {
+  width: 1920px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.experience .inner h3 {
+  font-size: 48px;
+  font-family: "Oswald";
+  letter-spacing: 5px;
+  font-weight: 600;
+}
+.experience .inner p {
+  font-size: 19px;
+  font-family: "Crimson Pro";
+  margin-top: 20px;
+  line-height: 180%;
+  font-weight: 600;
+}
+.experience .inner p:last-child {
+  font-size: 19px;
+  font-family: "Crimson Pro";
+  margin-top: 50px;
+  line-height: 180%;
+  font-weight: 400;
+  padding: 0 0 83px 0;
+  border-bottom: 1px solid #000;
+}
+
+.container {
+  margin: 400px 0;
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+
+.container .slided {
+  transition: 0.5s;
+  width: 400px;
+  box-shadow: 0 10px 50px gray;
+  height: 600px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider {
+  margin-top: 700px;
+
+  width: 100%;
+}
+.slider .inner {
+  position: relative;
+}
+
+.slided:nth-of-type(1),
+.slided:nth-of-type(2) {
+  transform: translate(calc(-50% * 5.1), -50%) translateZ(-100px);
+}
+.slided:nth-of-type(3) {
+  transform: translate(calc(-50% * 3.1), -50%) translateZ(-50px);
+}
+.slided:nth-of-type(4) {
+  transform: translate(calc(-50% * 1.1), -50%) translateZ(50px);
+}
+.slided:nth-of-type(5) {
+  transform: translate(calc(-50% * -0.9), -50%) translateZ(-50px);
+}
+.slided:nth-of-type(6),
+.slided:nth-of-type(7) {
+  transform: translate(calc(-50% * -2.9), -50%) translateZ(-100px);
+}
+.slided {
+  padding: 16px 16px 16px 16px;
+  display: flex;
+  text-align: left;
+}
+.slided ul {
+  width: 398px;
+  overflow: hidden;
+}
+
+.slided ul figure img {
+  object-fit: cover;
+}
+.slided ul figure {
+  width: 100%;
+}
+
+.slided ul p {
+  font-size: 16px;
+  font-family: "Crimson Pro";
+  margin-top: 46px;
+}
+
+.slided ul h2 {
+  font-size: 18px;
+  font-family: "Crimson Pro";
+  margin-top: 23px;
+}
+.slided ul h3 {
+  font-size: 18px;
+  font-family: roboto;
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+button {
+  margin: 20px;
+  outline: none;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  border: 2px solid #000;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-16 {
+  background: #000;
+  color: #fff;
+  z-index: 1;
+}
+.btn-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: #e0e5ec;
+  transition: all 0.3s ease;
+}
+
+.btn-16:hover {
+  color: #000;
+}
+.btn-16:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-16:active {
+  top: 2px;
+}
+
+.btn-15 {
+  background: #000;
+  color: #fff;
+  z-index: 1;
+}
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: #e0e5ec;
+  transition: all 0.3s ease;
+}
+.btn-15:hover {
+  color: #000;
+}
+.btn-15:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn-15:active {
+  top: 2px;
+}
+
+/* 위치는 래퍼가 담당 */
+.note-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(0, 0); /* JS가 이걸 갱신 */
+}
+
+/* 모양/효과는 안쪽 SVG가 담당 */
+.note-svg {
+  width: 30px;
+  aspect-ratio: 1/2;
+  transform-origin: 50% 50%;
+  transform: rotate(-8deg) scale(1);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+}
+
+/* 클릭 효과: 위치(transform translate)는 건드리지 않고 scale만 */
+.note-cursor.click .note-svg {
+  animation: tap 180ms ease-out;
+}
+@keyframes tap {
+  0% {
+    transform: rotate(-8deg) scale(1);
+  }
+  50% {
+    transform: rotate(-8deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(-8deg) scale(1);
+  }
+}
+
+.lang {
+  margin-top: 300px;
+}
+
+.lang figure {
+  padding: 0 0 56px 0;
+  border-bottom: 1px solid #000;
+  margin: 0 0 56px 0;
+}
+
+.lang p {
+  font-family: "Crimson Pro";
+  font-size: 31px;
+  font-style: italic;
+  width: 756px;
+  letter-spacing: 3px;
+  font-weight: 300;
+  line-height: 180%;
+  margin: 0 auto;
+}
+
+.lang strong {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 23px;
+  padding-bottom: 63px;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-family: "Oswald";
+  font-weight: 600;
+  border-bottom: 1px solid #000;
+}
+
+.lang p2 {
+  display: block;
+  margin-top: 23px;
+  font-size: 19.4px;
+  font-family: "Crimson Pro";
+  text-transform: none;
+}
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-card-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.carddds {
+  gap: 69px;
+  margin: 248px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.carddds li:hover img {
+  transform: scale(1.1);
+}
+
+.carddds img {
+  width: 100%;
+  transition: 0.6s;
+}
+
+.carddds li {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  gap: 64px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carddds li:hover {
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carddds figure {
+  width: 800px;
+  object-fit: cover;
+  transform: translateY(-50px);
+  overflow: hidden;
+}
+.carddds dl {
+  width: 455px;
+}
+.carddds dl dt {
+  font-size: 19.4px;
+  font-weight: 600;
+  font-family: "Crimson Pro";
+}
+
+.carddds dl dd {
+  font-size: 40px;
+  font-family: "Oswald";
+  font-weight: 500;
+}
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-Footer-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+#footer {
+  background: #110505;
+}
+
+.foot-logo .fi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 28px;
+}
+
+.sns-list {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 28px;
+  border-bottom: 1px solid #fff;
+}
+
+.go-to-top {
+  width: 100%;
+  height: 200px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 100;
+  font-family: Roboto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+
+.go-to-top::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background: url(../img/ep_arrow-up-bold.png) no-repeat 50% 50%;
+}
+.go-to-top:hover {
+  color: #fff;
+}
+
+.foot-text {
+  font-family: "Crimson Pro";
+  font-size: 25px;
+  color: #fff;
+  display: flex;
+  gap: 37px;
+  border-bottom: 1px solid #fff;
+}
+.foot-text li:first-child {
+  margin-left: 90px;
+}
+
+.foot-last {
+  font-family: "Crimson Pro";
+  font-size: 25px;
+  color: #fff;
+  gap: 37px;
+}
+
+.foot-lasts {
+  border-bottom: 1px solid #fff;
+}
+
+.foot-lasts p {
+  margin-left: 90px;
+  font-style: italic;
+}
+
+.foot-cons {
+  border: 1px solid #fff;
+}
+.foot-con {
+  padding: 75px 42px;
+  position: relative;
+}
+
+.foot-con::after {
+  content: "";
+  top: 50%;
+  left: 42px;
+  width: 59px;
+  height: 153px;
+  background: url(../img/footer.png) no-repeat 50% 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
