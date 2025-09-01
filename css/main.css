@@ -8,25 +8,28 @@ a:hover {
 }
 
 body {
+  width: 100vw;
   overflow-x: hidden;
   cursor: none;
 }
 #header {
-  width: 100%;
-  height: 245px;
-  /* background: yellow; */
+  width: 100vw;
+  min-height: 245px;
+  padding: 0 20px;
 }
 
 .inner {
+  width: 100%;
   position: relative;
 }
 
 h1 {
   content: "";
-  width: 295px;
-  height: 64px;
+  width: 15.364%;
+  min-height: 64px;
   background: url(../img/ss-logo2.svg) no-repeat 50% 50%;
-  transform: translate(-50%, 0%);
+  background-size: contain;
+  transform: translateX(-50%);
   position: absolute;
   left: 50%;
   top: 19px;
@@ -34,14 +37,16 @@ h1 {
 
 .inner nav-1 {
   width: 100%;
-  height: 95px;
+  min-height: 95px;
   display: flex;
   /* background: #f0f; */
   border-bottom: 1px solid #888;
 }
 
 .util-group {
-  padding: 0 32px;
+  width: 30%;
+
+  padding: 0 1.666%;
   margin-top: 19px;
   margin-left: auto;
   display: flex;
@@ -54,6 +59,44 @@ h1 {
 }
 .util-menu:first-child {
   position: relative;
+}
+
+.btn-menu {
+  display: none;
+}
+
+@media (max-width: 1240px) {
+  .btn-menu {
+    display: block;
+    position: absolute;
+  }
+  .util-group {
+    display: none;
+  }
+
+  #header .gnb {
+    display: none;
+  }
+
+  #header {
+    min-height: 150px;
+  }
+  h1 {
+    width: 25%;
+    left: 18%;
+  }
+}
+
+nav-1 > button {
+  content: "";
+  display: block;
+  width: 19.6px;
+  height: 16.3px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  top: 20px;
+  right: 50px;
 }
 
 .util-menu:first-child::after {
@@ -82,6 +125,8 @@ h1 {
 }
 
 .gnb {
+  width: 100%;
+  padding: 20px;
   margin-top: 80px;
   display: flex;
   gap: 100px;
@@ -92,6 +137,7 @@ h1 {
 }
 
 .gnb li {
+  width: 100%;
   position: relative;
   transition: 0.5s;
 }
@@ -124,11 +170,13 @@ h1 {
 
 .slide {
   width: 100%;
+  height: 100%;
   position: relative;
 }
 
 .slide-item {
   width: 100%;
+  height: 100%;
 }
 
 .slide-item img {
@@ -147,31 +195,38 @@ h1 {
 }
 
 .btn-next {
-  left: 20px;
+  left: 1.041%;
 }
 
 .btn-prev {
-  right: 20px;
+  right: 1.041%;
 }
 
 .slide {
   border: 1px solid #000;
   margin: 0 auto;
 }
+
+:root {
+  --font-size-1: 3rem;
+  --font-size-2: 2.5rem;
+  --font-size-2: 1.5rem;
+}
+
 .gran {
   position: absolute;
   font-family: "Oswald";
   font-weight: 600;
-  top: 76px;
-  left: 156px;
+  top: 3.958333333333333%;
+  left: 8.125%;
   color: #fff;
   font-size: 74px;
 }
 .limit {
   position: absolute;
   font-family: Roboto Light;
-  top: 166px;
-  left: 157px;
+  top: 18%;
+  left: 8.177083333333333%;
   color: #fff;
   font-size: 29px;
 }
@@ -179,21 +234,22 @@ h1 {
 .slide p {
   position: absolute;
   font-family: "Monsieur La Doulaise", Regular;
-  bottom: 92px;
-  right: 136px;
+  bottom: 4.7916%;
+  right: 7.083333333333333%;
   color: #fff;
-  font-size: 64px;
+  font-size: 4rem;
 }
 
 .inner {
-  width: 1320px;
+  width: 64.0625%;
   justify-content: center;
   text-align: center;
   margin: 0 auto;
+  padding: 0 1.041667%;
 }
 
 .explain .inner {
-  width: 1230px;
+  width: 64.0625%;
   line-height: 1.5;
 }
 
@@ -202,7 +258,7 @@ h1 {
   font-size: 28px;
   margin-top: 45px;
   text-align: center;
-  margin: 70px 75px;
+  margin: 3.645833333333333% 3.90625%;
 }
 .explain p strong {
   font-weight: 700;
@@ -217,8 +273,21 @@ h1 {
   font-size: 30px;
 }
 .build {
+  width: 100%;
   margin-top: 300px;
 }
+.build figure {
+  width: 100%;
+  aspect-ratio: 132/71;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.build figure img {
+  width: 100%;
+  aspect-ratio: 132/71;
+}
+
 .build .inner p {
   font-family: "Monsieur La Doulaise", Regular;
   font-size: 50px;
@@ -259,8 +328,16 @@ h1 {
   background: rgba(0, 0, 0, 0.2);
 }
 
+
+.card,
+.cardd {
+  width: 100%;
+}
 .cardd figure {
   position: relative;
+  width: 1000%;
+  
+  overflow: hidden;
 }
 .cardd figure::after {
   content: "";
@@ -342,17 +419,17 @@ h1 {
 }
 
 .video {
-  width: 1920px;
+  width: 100%;
   margin: 220px auto;
 }
 
 .video .inner {
-  width: 1920px;
+  width: 100%;
   background: #888;
 }
 
 .video .inner iframe {
-  width: 1920px;
+  width: 100%;
   height: 500px;
   object-fit: cover;
 }
@@ -760,4 +837,41 @@ button {
   background: url(../img/footer.png) no-repeat 50% 50%;
   transform: translateY(-50%);
   position: absolute;
+}
+
+@media (max-width: 1240px) {
+  .slide p {
+    font-size: var(--font-size-1);
+  }
+
+  .gran {
+    font-size: var(--font-size-1);
+  }
+
+  .limit {
+    font-size: var(--font-size-3);
+  }
+
+  .explain p {
+    font-size: 20px;
+  }
+
+  .inner {
+    width: 95%;
+  }
+}
+
+@media (max-width: 850px) {
+  .slide p {
+    font-size: var(--font-size-3);
+  }
+  .gran {
+    font-size: var(--font-size-2);
+  }
+  .limit {
+    font-size: 1.2rem;
+  }
+  .explain p {
+    font-size: 18px;
+  }
 }
