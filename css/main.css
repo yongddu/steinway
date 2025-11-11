@@ -2,6 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap");
+html {
+  background: #fff;
+}
+* {
+  cursor: none !important;
+}
+
 a:hover {
   text-decoration: none;
   color: #000;
@@ -25,7 +32,7 @@ body {
 
 h1 {
   content: "";
-  width: 15.364%;
+  width: 20%;
   min-height: 64px;
   background: url(../img/ss-logo2.svg) no-repeat 50% 50%;
   background-size: contain;
@@ -54,7 +61,7 @@ h1 {
   font-weight: 600;
 }
 .util-menu {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.3;
 }
 .util-menu:first-child {
@@ -93,7 +100,6 @@ nav-1 > button {
   width: 19.6px;
   height: 16.3px;
   border: none;
-  cursor: pointer;
   background: transparent;
   top: 20px;
   right: 50px;
@@ -101,12 +107,13 @@ nav-1 > button {
 
 .util-menu:first-child::after {
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   position: absolute;
   background: url(../img/point-2.png) no-repeat 50% 50%;
-  right: -30px;
-  top: 11px;
+  background-size: contain;
+  right: -20px;
+  top: 10px;
   transform: translateY(-50%);
 }
 .util-menu:last-child {
@@ -115,19 +122,20 @@ nav-1 > button {
 
 .util-menu:last-child::after {
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   position: absolute;
   background: url(../img/point-1.png) no-repeat 50% 50%;
-  right: -30px;
-  top: 11px;
+  background-size: contain;
+  right: -20px;
+  top: 10px;
   transform: translateY(-50%);
 }
 
 .gnb {
   width: 100%;
   padding: 20px;
-  margin-top: 80px;
+  margin-top: 50px;
   display: flex;
   gap: 100px;
   justify-content: center;
@@ -137,27 +145,28 @@ nav-1 > button {
 }
 
 .gnb li {
-  width: 100%;
   position: relative;
   transition: 0.5s;
 }
 
-.gnb li:hover::before {
-  content: "까꿍";
-  background: #000;
-  width: 100%;
-  height: 3px;
-  position: absolute;
-  bottom: -5px;
+.gnb li a {
+  position: relative;
+  display: inline-block;
 }
-.gnb li::before {
+
+.gnb li a::before {
   content: "";
   background: #000;
   width: 0%;
   height: 3px;
   position: absolute;
   bottom: -5px;
+  left: 0;
   transition: 0.5s;
+}
+
+.gnb li:hover a::before {
+  width: 100%;
 }
 
 .hero {
@@ -191,7 +200,6 @@ nav-1 > button {
   background: none;
   border: none;
   background: transparent;
-  cursor: pointer;
 }
 
 .btn-next {
@@ -328,27 +336,16 @@ nav-1 > button {
   background: rgba(0, 0, 0, 0.2);
 }
 
-
 .card,
 .cardd {
   width: 100%;
 }
 .cardd figure {
   position: relative;
-  width: 1000%;
-  
-  overflow: hidden;
-}
-.cardd figure::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
 }
-.card h3 {
+.cardd figure .card h3 {
   color: #333;
   margin-bottom: 1rem;
   font-size: 40px;
@@ -396,7 +393,7 @@ nav-1 > button {
 }
 
 .build-explain .inner .hehe h5 {
-  font-size: 35px;
+  font-size: 32px;
   font-family: "Oswald";
   font-weight: 500;
   width: 487px;
@@ -517,6 +514,7 @@ nav-1 > button {
 
 .slided ul figure img {
   object-fit: cover;
+  width: 100%;
 }
 .slided ul figure {
   width: 100%;
@@ -557,7 +555,6 @@ button {
   font-family: "Lato", sans-serif;
   font-weight: 500;
   background: transparent;
-  cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
@@ -628,6 +625,7 @@ button {
   pointer-events: none;
   z-index: 9999;
   transform: translate(0, 0); /* JS가 이걸 갱신 */
+  mix-blend-mode: difference;
 }
 
 /* 모양/효과는 안쪽 SVG가 담당 */
@@ -636,7 +634,7 @@ button {
   aspect-ratio: 1/2;
   transform-origin: 50% 50%;
   transform: rotate(-8deg) scale(1);
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.8));
 }
 
 /* 클릭 효과: 위치(transform translate)는 건드리지 않고 scale만 */
@@ -747,7 +745,7 @@ button {
   font-family: "Oswald";
   font-weight: 500;
 }
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-Footer-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* -@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 #footer {
   background: #110505;
 }

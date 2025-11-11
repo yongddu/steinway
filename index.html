@@ -13,17 +13,19 @@
       rel="stylesheet"
     />
     <title>Steinway and sons s</title>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
   </head>
   <body>
     <div class="note-cursor" id="note">
       <svg class="note-svg" viewBox="0 0 60 120" aria-hidden="true">
-        <rect x="36" y="12" width="6" height="75" rx="3" />
+        <rect x="36" y="12" width="6" height="75" rx="3" fill="white" />
         <ellipse
           cx="28"
           cy="90"
           rx="18"
           ry="12"
           transform="rotate(-20 28 90)"
+          fill="white"
         />
       </svg>
     </div>
@@ -105,7 +107,7 @@
       <section class="build">
         <div class="inner">
           <figure><img src="./img/build-img.png" alt="#" /></figure>
-          <p>"To   the best Piano Possible"</p>
+          <p>"To the best Piano Possible"</p>
         </div>
       </section>
 
@@ -538,6 +540,28 @@
           { passive: true }
         );
       })();
+    </script>
+
+    <!-- Lenis 부드러운 스크롤 초기화 -->
+    <script>
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: "vertical",
+        gestureDirection: "vertical",
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
     </script>
   </body>
 </html>
